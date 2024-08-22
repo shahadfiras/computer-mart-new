@@ -1,0 +1,878 @@
+/* #form1{
+    position: fixed;
+    display: block;
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left, #AF6480, #C3CEE5);
+    text-align: center;
+    margin-left:-1% ;
+    
+}
+ #h-welcom{
+    font-size: 40px;
+    padding-top:20px ;
+    font-size: 36px;
+    color: #2f0722; 
+    text-shadow: 0 0 10px #bbc2c9, 0 0 10px #cd7cc9a0, 0 0 20px #b30071;
+     يمكن إضافة المزيد من التأثيرات هنا حسب الحاجة 
+}
+#h-h3:hover{
+    font-size:25px ;
+    color: #efefef;
+}
+#h-h4:hover{
+    font-size:25px ;
+    color: #efefef;
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.video-container {
+  max-width: 40%;
+}
+
+.img-main {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%; /*حتى يصير دائري*/
+  /* max-width: 70%; */
+  /* float: left; */
+}
+/*الجزء الاول من الصفحة*/
+.secshen {
+  background-color: #f4d9d0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 {
+  /*خاص باسم الصفحة*/
+
+  color: #d2438b;
+  font-size: 20px;
+  letter-spacing: 0rem; /*space bettween leters*/
+  cursor: pointer; /*المؤشر يكون بشكل السهم او اليد*/
+  /* float: right; */
+  /* margin-left: -100px;  */
+  /*حتى يصير قريب على الصورة بمسافة معتدلة*/
+}
+span {
+  color: #ffffff;
+}
+
+nav {
+  padding-top: 1.2rem;
+  padding-left: 8%;
+  padding-right: 3%;
+  padding-bottom: 10px;
+  display: flex; /*تسمح بترتيب وتنظيم العناصر الفرعية 
+    (flex items) بداخلها بطريقة مرنة ومتكيفة*/
+  justify-content: space-between;
+  /*align-items: center;
+    تستخدم ضمن حاويات (display: flex; عندما تكون خاصية  مفعّلة)
+     لتوزيع العناصر الفرعية داخل الحاوية بشكل يضمن وجود مسافة متساوية بينها،
+     مع وضع أول عنصر عند بداية الحاوية وآخر عنصر عند نهايتها.*/
+  align-items: center;
+  flex-direction: row;
+}
+nav ul li {
+  list-style-type: none; /*شكل التعداد مال القوائم*/
+  display: inline-block; /*يظهرون في سطر احد*/
+  margin: 0.4rem 0.7rem;
+  position: relative; /*تجعل العنصر يتم وضعه بشكل طبيعي,
+                      يمكنك استخدام خصائص 
+    top, right, bottom, وleft لتحديد إزاحته من موقعه الطبيعي*/
+}
+nav li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #e9ecee;
+  background-color: #d2438b;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.9s;
+  border: 2px solid transparent;
+  padding: 10px;
+  border-radius: 20px;
+  display: block;
+}
+nav ul li a:hover {
+  color: #d656a3;
+  background-color: #fff1db;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/*تنسيق القوائم المنسدلة الفرعية*/
+.submenu {
+  display: none;
+}
+nav ul li:hover .submenu {
+  display: block;
+  position: absolute; /*تستخدم لوضع عنصر بشكل دقيق في الصفحة
+                      بغض النظر عن تدفق الوثيقة المعتاد. 
+  عندما تُستخدم هذه الخاصية، يتم إخراج العنصر من التدفق العادي للوثيقة 
+  ويُمكن وضعه في مكان محدد باستخدام خصائص الإزاحة 
+  top, right, bottom, وleft.*/
+  left: 0;
+  top: 100%;
+  background-color: #f4d9d0;
+  z-index: 1;
+  border-radius: 18px;
+  margin-left: 2px;
+}
+.submenu ul {
+  display: block;
+  margin: 10px;
+}
+.submenu ul li {
+  width: 150px;
+  padding: 10px;
+}
+.submenu a {
+  color: #d656a3;
+  background-color: #f4d9d0;
+}
+
+/*مال لوك ان*/
+.btn {
+  font-size: 20px;
+  color: #b55a8a;
+  background-color: #f8ede3;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.7s;
+  border: 2px solid transparent;
+  padding: 8px;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: #b55a8a;
+  color: #f8ede3;
+}
+
+/*الجزء الثاني من الصفحة*/
+.clsdiv1 {
+  flex-grow: 1; /*يعني هذا العنصر يشغل كل المساحة المتبقية*/
+  padding: 7%;
+  align-items: center;
+  background-image: url(imag/mm2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  transition: 0.9s;
+  justify-content: space-around;
+}
+.secshen .content-text {
+  width: 55%;
+}
+.secshen .grid-container {
+  width: 55%;
+}
+.secshen .grid-container img {
+  padding: 0;
+  margin: 0;
+}
+
+h3:hover {
+  color: rgb(136, 16, 16);
+}
+h2:hover {
+  color: rgb(136, 16, 16);
+}
+label:hover {
+  font-size: xx-large;
+  color: rgb(136, 16, 16);
+}
+h3 {
+  font-size: x-large;
+  letter-spacing: 0px;
+  color: rgb(42, 21, 35);
+  padding: 5px;
+}
+h2 {
+  color: #d2438b;
+  font-size: xx-large;
+  padding: 2px;
+  cursor: pointer;
+}
+label {
+  font-size: 25px;
+  color: rgb(23, 19, 19);
+  padding: 2px;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+}
+
+/*خاص بالصورة الي جنب الكتابة الترحيبية*/
+.grid-container {
+  display: flex;
+  align-items: flex-end;
+  float: right;
+  gap: 200px 90px;
+  grid-template-columns: auto auto auto;
+  height: 26vh;
+  justify-content: flex-end;
+  /* margin-left: 600px;*/
+  margin-top: -300px;
+  width: 300px;
+  height: 400px;
+}
+
+.grid-item {
+  padding: 103px;
+}
+
+.filter-image {
+  text-align: center;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  background: white;
+  padding: 1px 1px 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s linear;
+  z-index: 0;
+  position: relative;
+  transform: rotate(4deg);
+}
+
+.photo2 {
+  padding: 1rem;
+  filter: drop-shadow(0 2px 1px darkgrey);
+  display: inline-block;
+}
+
+.photo2 {
+  filter: url(#crumple-effect-2);
+}
+
+.photo2:hover {
+  filter: sepia(10%);
+  transform: rotate(-4deg);
+  border: 2px inset rgb(227, 210, 219);
+}
+
+.sections2 {
+  background-color: #f4d9d0;
+  /* height: 100vh; */
+  /* margin-top: -40px; */
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 20%;
+  height: 50%;
+  transition: all 1s;
+}
+
+/*خاص بتعداد الخدمات -الجزء الثالث في الصفحة الرئيسية-*/
+.newCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.accordian {
+  width: 810px;
+  height: 460px;
+  overflow: hidden;
+  max-width: 100%;
+  /*Time for some styling*/
+  /* padding: 100px auto; */
+  /* margin-inline: 20%; */
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+  width: 2000px;
+  margin-top: 35px;
+  /*This will give ample space to the last item to move
+    instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+  position: relative;
+  display: block;
+  width: 120px;
+  float: left;
+  border-left: 1px solid #888;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+
+  /*Transitions to give animation effect*/
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /*If you hover on the images now you should be able to 
+    see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {
+  width: 50px;
+}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {
+  width: 440px;
+}
+
+.accordian li img {
+  display: block;
+}
+
+/*Image title styles*/
+.image_title {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 640px;
+}
+
+.image_title a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 26px;
+  padding-bottom: 36px;
+}
+.image_title a:hover {
+  color: crimson;
+  background-color: #f4d9d0cc;
+}
+#div1 {
+  width: 430px;
+  height: 450px;
+}
+
+/*البوتون الي جوة الكلام التعريفي في الصفحة الرئيسية*/
+.btn-12 {
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+}
+.btn-12 span {
+  color: #ff4da6;
+  background: linear-gradient(0deg, #f1cccc 0%, rgb(246, 238, 228) 100%);
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-12 span:nth-child(1) {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(9, 7, 7, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+.custom-btn {
+  width: 0px;
+  height: 0px;
+  color: #545454;
+  border-radius: 0;
+  padding: 0;
+  padding-left: 10%;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  background: linear-gradient(to top, #4dc3ff, #b3e6ff);
+  border: none;
+}
+.btn-5:hover {
+  color: #161718;
+  background: #96d3ea;
+  box-shadow: none;
+}
+.btn-5:before,
+.btn-5:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #0088cc;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+a {
+  text-decoration: none;
+}
+
+/*الجزء مال جدول المنتجات*/
+.tabl {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px outset black;
+  border-width: 6px;
+  padding: 5px;
+  max-width: 100%;
+}
+#img-list {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: auto;
+}
+#img-list:hover {
+  width: 230px;
+  height: auto;
+}
+td {
+  padding: 7px;
+  font-size: 24px;
+  border: 2px solid transparent;
+}
+.tabl-a {
+  background-color: #0d0d16c9;
+  width: 98%;
+  border: 2px outset black;
+  border-radius: 10px;
+  margin-left: 10px;
+  border: 2px solid transparent;
+}
+#id-a {
+  color: #f7f1e3;
+  padding: 0px;
+  font-size: 15px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+#id-a:hover {
+  color: rgb(201, 97, 97);
+  border-radius: 4px;
+}
+
+/*الجزء الاخير*/
+.section3 {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*------MEDIA icon------*/
+nav ul.is-active {
+  display: block;
+}
+
+.fa-bars {
+  position: relative;
+  display: none;
+  font-size: 35px;
+  color: #d2438b;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  z-index: 2;
+}
+
+/*------MEDIA QUERIES main PAGE------*/
+
+
+/* استعلامات الوسائط للشاشات الأصغر */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+  /*جزء القوائم*/
+  h3 {
+    font-size: larger;
+  }
+
+  .secshen {
+    height: auto;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  ul.ul-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff1db;
+    z-index: 2;
+    padding-top: 50px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 15px; */
+    display: none;
+  }
+
+  ul.ul-1 li {
+    display: block;
+    text-align: center;
+    margin: 30px;
+  }
+  .grid-container {
+    display: none;
+  }
+  svg {
+    display: none;
+  }
+
+  .secshen .content-text {
+    width: 100%;
+  }
+
+  /*الجزء الخاص بعرض الخدمات (جزء الصور)*/
+  .accordian {
+    width: 88%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .accordian ul {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .accordian li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .accordian ul:hover li {
+    width: 100%;
+  }
+
+  .accordian ul li:hover {
+    width: 100%;
+  }
+
+  .image_title {
+    width: 100%;
+  }
+
+  .image_title a {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  #div1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  td {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  #id-a {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .section3 {
+    padding: 10px;
+  }
+
+  #img-list {
+    width: 120px;
+  }
+  #img-list:hover {
+    width: 120px;
+  }
+  .btn-5 {
+    width: 80px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media screen and (min-width:601px)and (max-width:822px) {
+  /*جزء القوائم*/
+  h3 {
+    font-size: larger;
+  }
+
+  .secshen {
+    height: auto;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  ul.ul-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff1db;
+    z-index: 2;
+    padding-top: 50px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 15px; */
+    display: none;
+  }
+
+  ul.ul-1 li {
+    display: block;
+    text-align: center;
+    margin: 30px;
+  }
+  .grid-container {
+    display: none;
+  }
+  svg {
+    display: none;
+  }
+
+  .secshen .content-text {
+    width: 100%;
+  }
+
+  /*الجزء الخاص بعرض الخدمات (جزء الصور)*/
+  .accordian {
+    width: 88%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .accordian ul {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .accordian li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .accordian ul:hover li {
+    width: 100%;
+  }
+
+  .accordian ul li:hover {
+    width: 100%;
+  }
+
+  .image_title {
+    width: 100%;
+  }
+
+  .image_title a {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  #div1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  td {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  #id-a {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .section3 {
+    padding: 10px;
+  }
+
+  #img-list {
+    width: 120px;
+  }
+  #img-list:hover {
+    width: 120px;
+  }
+  .btn-5 {
+    width: 80px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width:822px)and (max-width:1025px) {
+  /*جزء القوائم*/
+  h3 {
+    font-size: x-large;
+  }
+
+  .secshen {
+    height: auto;
+  }
+
+  .btn {
+    display: block;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  ul.ul-1 {
+    display: block;
+  }
+
+  ul.ul-1 li {
+    text-align: center;
+  }
+  .grid-container {
+    width: 300px;
+    height: 300px;
+    margin-right: -100px;
+    display: block;
+  }
+  .filter-image{
+    width: 300px;
+    height: 300px;
+  }
+  svg {
+    display: block;
+  }
+
+  .secshen .content-text {
+    width: 100%;
+  }
+
+  /*الجزء الخاص بعرض الخدمات (جزء الصور)*/
+  
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media screen and (min-width:1025px)and (max-width:1440px){
+
+}
+
+@media screen and (min-width:1440px)and (max-width:2440px){
+  label{
+    font-size: 25px;
+  }
+ h2{
+  font-size: 50px;
+ }
+
+ h3{
+  font-size: 30px;
+ }
+  .grid-container {
+    width: 400px;
+    height: 500px;
+  }
+  .filter-image{
+    width: 400px;
+    height: 500px;
+  }
+}
